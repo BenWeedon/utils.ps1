@@ -25,11 +25,13 @@ CLRVersion = "4.0"
 
 # Modules to import as nested modules of the module specified in RootModule/ModuleToProcess
 NestedModules = @(
-    "Watch-Command.ps1")
+    "Watch-Command.ps1",
+    "Set-Wallpaper.ps1")
 
 # Cmdlets to export from this module
 CmdletsToExport = @(
-    "Watch-Command")
+    "Watch-Command",
+    "Set-Wallpaper.ps1")
 
 AliasesToExport = @(
     "watch")
