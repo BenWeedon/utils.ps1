@@ -3,7 +3,7 @@
     [OutputType([Void])]
     Param(
         [Parameter(Mandatory=$True, Position=0)]
-        [String]$Path = "$HOME\Desktop\desktop_wallpaper.jpg",
+        [String]$Path,
         [Parameter(Mandatory=$False, Position=1)]
         [ValidateSet("Tile", "Center", "Stretch", "Fill", "Fit", "Span", "NoChange")]
         [String]$Style = "Fill"
