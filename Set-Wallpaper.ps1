@@ -2,7 +2,7 @@
     [CmdletBinding()]
     [OutputType([Void])]
     Param(
-        [Parameter(Mandatory=$True, Position=0)]
+        [Parameter(Mandatory=$True, Position=0, ValueFromPipeline=$True)]
         [String]$Path,
         [Parameter(Mandatory=$False, Position=1)]
         [ValidateSet("Tile", "Center", "Stretch", "Fill", "Fit", "Span", "NoChange")]
