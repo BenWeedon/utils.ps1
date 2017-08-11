@@ -69,6 +69,6 @@
                 }
             }
 "@
-        [Wallpaper.Setter]::SetWallpaper($Path, $Style)
+        [Wallpaper.Setter]::SetWallpaper((Convert-Path $Path), $Style)
     }
 }
