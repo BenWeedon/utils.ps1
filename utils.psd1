@@ -31,7 +31,7 @@ NestedModules = @(
 # Cmdlets to export from this module
 CmdletsToExport = @(
     "Watch-Command",
-    "Set-Wallpaper.ps1")
+    "Set-Wallpaper")
 
 AliasesToExport = @(
     "watch")
