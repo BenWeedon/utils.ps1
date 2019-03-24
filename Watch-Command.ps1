@@ -9,7 +9,7 @@
     PROCESS {
         while ($True) {
             Clear-Host
-            &$Command
+            & $Command | Out-String
             Start-Sleep -Seconds $Seconds
         }
     }
