@@ -4,9 +4,9 @@ function Edit-RunMru {
         A script to edit the MRU for the Run dialog
 
         .DESCRIPTION
-        Opens an editor (gvim) to edit the MRU list. The caller can reorder, add
-        and remove entries from the list, and the updates will be saved back to
-        the registry.
+        Opens an editor (gvim by default) to edit the MRU list. The caller
+        can reorder, add and remove entries from the list, and the updates
+        will be saved back to the registry.
 
         .PARAMETER Force
         Save the edits without prompting the user for confirmation
@@ -14,7 +14,8 @@ function Edit-RunMru {
 
     [CmdletBinding()]
     param(
-        [switch]$Force
+        [Switch] $Force,
+        [String] $Editor = "gvim"
     )
     PROCESS {
         $eap = $ErrorActionPreference
@@ -40,7 +41,7 @@ function Edit-RunMru {
             $tempFile = New-TemporaryFile
             try {
                 Out-File -FilePath $tempFile.FullName -Encoding utf8 -InputObject $tempFileContents -NoNewline
-                Start-Process gvim $tempFile.FullName -Wait
+                Start-Process $Editor $tempFile.FullName -Wait
                 $tempFileContents = Get-Content $tempFile
             } finally {
                 Remove-Item $tempFile
