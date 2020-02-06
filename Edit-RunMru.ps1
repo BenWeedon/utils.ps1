@@ -29,7 +29,8 @@ function Edit-RunMru {
 
             $tempFileContents = @"
 # The following lines represent the item in the Run dialog MRU, in order.
-# The format is "<key> <item>" where key is a single letter.
+# The format is "<key> <item>\1" where key is a single letter. Make sure to
+# include the \1 at the end.
 # Edit the below list to update the MRU, any reordering will be preserved.
 
 
