@@ -40,7 +40,7 @@ function Edit-RunMru {
             $tempFile = New-TemporaryFile
             try {
                 Out-File -FilePath $tempFile.FullName -Encoding utf8 -InputObject $tempFileContents -NoNewline
-                gvim $tempFile.FullName
+                Start-Process gvim $tempFile.FullName -Wait
                 $tempFileContents = Get-Content $tempFile
             } finally {
                 Remove-Item $tempFile
