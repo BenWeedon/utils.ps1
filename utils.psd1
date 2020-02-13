@@ -27,13 +27,15 @@ CLRVersion = "4.0"
 NestedModules = @(
     "Watch-Command.ps1",
     "Set-Wallpaper.ps1",
-    "Edit-RunMru.ps1")
+    "Edit-RunMru.ps1",
+    "Test-IsAdmin.ps1")
 
 # Cmdlets to export from this module
 CmdletsToExport = @(
     "Watch-Command",
     "Set-Wallpaper",
-    "Edit-RunMru")
+    "Edit-RunMru",
+    "Test-IsAdmin")
 
 AliasesToExport = @(
     "watch")
