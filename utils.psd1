@@ -28,15 +28,18 @@ NestedModules = @(
     "Watch-Command.ps1",
     "Set-Wallpaper.ps1",
     "Edit-RunMru.ps1",
-    "Test-IsAdmin.ps1")
+    "Test-IsAdmin.ps1",
+    "Start-AdminPwsh.ps1")
 
 # Cmdlets to export from this module
 CmdletsToExport = @(
     "Watch-Command",
     "Set-Wallpaper",
     "Edit-RunMru",
-    "Test-IsAdmin")
+    "Test-IsAdmin",
+    "Start-AdminPwsh")
 
 AliasesToExport = @(
-    "watch")
+    "watch",
+    "sudo")
 }
