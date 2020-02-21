@@ -6,7 +6,7 @@ function Start-AdminPwsh {
     $ErrorActionPreference = "Stop"
 
     try {
-        Start-Process -Verb RunAs pwsh
+        Start-Process -Verb RunAs pwsh -ArgumentList "-WorkingDirectory $(Get-Location)"
     } finally {
         $ErrorActionPreference = $eap
     }
