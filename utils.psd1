@@ -29,7 +29,8 @@ NestedModules = @(
     "Set-Wallpaper.ps1",
     "Edit-RunMru.ps1",
     "Test-IsAdmin.ps1",
-    "Start-AdminPwsh.ps1")
+    "Start-AdminPwsh.ps1",
+    "Update-Pwsh.ps1")
 
 # Cmdlets to export from this module
 CmdletsToExport = @(
@@ -37,7 +38,8 @@ CmdletsToExport = @(
     "Set-Wallpaper",
     "Edit-RunMru",
     "Test-IsAdmin",
-    "Start-AdminPwsh")
+    "Start-AdminPwsh",
+    "Update-Pwsh")
 
 AliasesToExport = @(
     "watch",
