@@ -1,12 +1,19 @@
 function Start-AdminPwsh {
     [CmdletBinding()]
-    param()
+    param(
+        [Parameter(ValueFromRemainingArguments)]
+        $Arguments
+    )
 
     $eap = $ErrorActionPreference
     $ErrorActionPreference = "Stop"
 
     try {
-        Start-Process -Verb RunAs pwsh -ArgumentList "-WorkingDirectory $(Get-Location)"
+        $argList =  @("-WorkingDirectory $(Get-Location)")
+        if ($Arguments.Count -gt 0) {
+            $argList += " -Command $Arguments; Pause"
+        }
+        Start-Process -Verb RunAs pwsh -ArgumentList $argList
     } finally {
         $ErrorActionPreference = $eap
     }
