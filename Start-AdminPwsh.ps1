@@ -2,7 +2,7 @@ function Start-AdminPwsh {
     [CmdletBinding()]
     param(
         [Parameter(ValueFromRemainingArguments)]
-        $Arguments
+        [String[]] $Arguments
     )
 
     $eap = $ErrorActionPreference
