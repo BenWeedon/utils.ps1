@@ -10,7 +10,7 @@
     )
     PROCESS {
         # Adapted from http://stackoverflow.com/questions/9440135/powershell-script-from-shortcut-to-change-desktop.
-        Add-Type @"
+        Add-Type -ReferencedAssemblies "Microsoft.Win32.Registry" -TypeDefinition @"
             using System;
             using System.Runtime.InteropServices;
             using Microsoft.Win32;
