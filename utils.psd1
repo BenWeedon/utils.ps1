@@ -30,7 +30,8 @@ NestedModules = @(
     "Edit-RunMru.ps1",
     "Test-IsAdmin.ps1",
     "Start-AdminPwsh.ps1",
-    "Update-Pwsh.ps1")
+    "Update-Pwsh.ps1",
+    "Get-Hwnd.ps1")
 
 # Cmdlets to export from this module
 CmdletsToExport = @(
@@ -39,7 +40,8 @@ CmdletsToExport = @(
     "Edit-RunMru",
     "Test-IsAdmin",
     "Start-AdminPwsh",
-    "Update-Pwsh")
+    "Update-Pwsh",
+    "Get-Hwnd")
 
 AliasesToExport = @(
     "watch",
