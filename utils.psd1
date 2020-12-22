@@ -31,7 +31,8 @@ NestedModules = @(
     'Test-IsAdmin.ps1',
     'Start-AdminPwsh.ps1',
     'Update-Pwsh.ps1',
-    'Get-Hwnd.ps1')
+    'Get-Hwnd.ps1',
+    'Test-IsInJobObject.ps1')
 
 # Cmdlets to export from this module
 CmdletsToExport = @(
@@ -41,7 +42,8 @@ CmdletsToExport = @(
     'Test-IsAdmin',
     'Start-AdminPwsh',
     'Update-Pwsh',
-    'Get-Hwnd')
+    'Get-Hwnd',
+    'Test-IsInJobObject')
 
 AliasesToExport = @(
     'watch',
